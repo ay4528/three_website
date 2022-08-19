@@ -8,9 +8,9 @@ const canvas = document.querySelector("#webgl");
 const scene = new THREE.Scene();
 
 //背景用のテクスチャ
-const textureLoader = new THREE.TextureLoader();
-const bgTexture = textureLoader.load("bg/bg.jpg");
-scene.background = bgTexture;
+// const textureLoader = new THREE.TextureLoader();
+// const bgTexture = textureLoader.load("bg/bg.jpg");
+// scene.background = bgTexture;
 
 //サイズ
 const sizes = {
@@ -29,6 +29,7 @@ const camera = new THREE.PerspectiveCamera(
 //レンダラー
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
+    alpha: true
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(window.devicePixelRatio);
